@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Santiago Solidária</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🤝 <strong>Santiago Solidária</strong></div>
+        <p>Informação, ajuda e conexão para quem foi atingido.</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <span>🏠 Temporal em Santiago</span>
+            <h1>Como podemos ajudar?</h1>
+            <p>Encontre, solicite ajuda ou uma familia.</p>
+        </section>
+
+        <section class="actions">
+            <button class="card danger" onclick="irPara('solicitacao')">
+                <b>🆘 Preciso de ajuda</b>
+                <small>Solicitar assistência para minha familia</small>
+            </button>
+
+            <button class="card success" onclick="alert('Área de voluntários em breve!')">
+                <b>🤝 Quero ajudar?</b>
+                <small>Oferecer doações, trabalhos ou transportes</small>
+            </button>
+            
+            <button class="card info" onclick="irPara('locais')">
+                <b>📍 Encontrar ajuda</b>
+                <small>Ver abrigos e pontos de atendimento</small>
+            </button>
+        </section>
+
+        <section class="emergency">
+            <h2>🚨 Emergência</h2>
+            <p>Existe risco de vida? Não espere pelo cadastro.</p>
+            <a href="tel:193">193 Bombeiros</a>
+            <a href="tel:192">192 SAMU</a>
+            <a href="tel:190">190 Brigada</a>
+        </section>
+
+        <section id="locais" class="panel">
+            <h2>📢 Informações importantes</h2>
+
+            <article>
+                🏠 <b>Abrigo</b><br>
+                Ginásio do Bairro Vista Alegre.
+            </article>
+
+            <article>
+                🛡️ <b>Defesa Civil</b><br>
+                (55) 98428-7631
+            </article>
+
+            <article>
+                📦 <b>Doações</b><br>
+                Cesta básicas, cobertas, roupas e colchões.
+            </article>
+        </section>
+
+        <section id="solicitacao" class="panel form">
+            <h2>🆘 Solicitar ajuda</h2>
+            <p>Preencha seus dados para que possamos entrar em contato.</p>
+
+            <h3>O que você precisa?</h3>
+
+            <label><input type="checkbox" name="ajuda"> 🏠 Casa danificada</label>
+            <label><input type="checkbox" name="ajuda"> 🟦 Lona</label>
+            <label><input type="checkbox" name="ajuda"> 🍚 Alimentos</label>
+            <label><input type="checkbox" name="ajuda"> 🛏️ Colchão</label>
+            <label><input type="checkbox" name="ajuda"> 👕 Roupas</label>
+            <label><input type="checkbox" name="ajuda"> 🧹 Materiais de limpeza</label>
+
+            <h3>👤 Dados do solicitante</h3>
+
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" placeholder="Seu nome completo">
+
+            <label for="telefone">telefone / WhatsApp</label>
+            <input id="telefone" type="tel" placeholder="(55) 99999-99999">
+
+            <label for="endereco">Endereço</label>
+            <input id="endereco" type="text" placeholder="Rua, número e Bairro">
+
+            <label for="observacao">Conte o que aconteceu</label>
+            <textarea id="observacao"
+            placeholder="Descreva brevemente a situação. . ."></textarea>
+
+            <small>
+                🔒 Seus dados serão utilizados apenas para contato e encaminhamento da solicitação.
+            </small>
+
+            <button class="send" onclick="enviarSolicitacao()">
+                Enviar solicitação
+            </button>
+        </section>
+    </main>
+</body>
